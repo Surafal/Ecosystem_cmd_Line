@@ -1,0 +1,103 @@
+ ------------- Ecosystem---db
+ 
+ 
+
+List all contents, including hidden files and directories, in long format, ordered by the date and time they were last modified.
+
+ls -alt
+
+2.
+
+Use cat to view the contents of rocks.txt.
+
+cat rocks.txt
+
+3.
+
+Redirect the standard output of rocks.txt to mosses.txt and use cat to view the contents of mosses.txt.
+
+cat rocks.txt > mosses.txt
+cat mosses.txt
+
+4.
+
+Redirect plants.txt as standard input to the wordcount command. Use the -l option on the wordcount command.
+
+wc -l < plants.txt
+
+5.
+
+Append the standard output of streams.txt to plants.txt. Then use cat to view the contents of plants.txt.
+
+cat streams.txt >> plants.txt
+cat plants.txt
+
+6.
+
+Append the standard output of plants.txt to trees.txt. Then use cat to view the contents of trees.txt.
+
+cat plants.txt >> trees.txt
+cat trees.txt
+
+7.
+
+In one command, pipe the ls -l command to the head command. Then redirect the standard output of the head command to list1.txt.
+
+Once you complete the above step, use cat to view the contents of list1.txt.
+
+ls -l | head > list1.txt
+cat list1.txt
+
+8.
+
+In one command, pipe the standard output of the ls -la command to the head command, then append the standard output to ** list1.txt**, then pipe the standard output to the wc command.
+
+Once you complete the above step, use cat to view the contents of list1.txt.
+
+ls -la | head >> list1.txt | wc 
+cat list1.txt
+
+9.
+
+Sort the contents of mammals.txt in alphabetical order.
+
+sort mammals.txt
+
+10.
+
+Use the uniq command to filter out duplicate, adjacent lines in mammals.txt
+
+uniq mammals.txt
+
+11.
+
+In a single command, use the sort command to filter out duplicate, adjacent lines in flowers.txt, pipe it to the uniq command, and redirect the standard output of the uniq command to uniq-flowers.txt.
+
+Once you complete the above command, use cat to view contents of uniq-flowers.txt
+
+sort flowers.txt | uniq > uniq-flowers.txt
+cat uniq-flowers.txt
+
+12.
+
+Use the grep command to search uppercase instances of the string ‘Mushroom’ in fungi.txt.
+
+grep Mushroom fungi.txt
+
+13.
+
+Use the grep command to search uppercase or lower instances of the string ‘Mushroom’ or ‘mushroom’ in fungi.txt.
+
+grep -i Mushroom fungi.txt
+
+14.
+
+Use the grep command to search for the string ‘tree’ in the ecosystem/ directory, and output filenames with matched results. Do not output line numbers.
+
+grep -Rl tree .
+
+15.
+
+Use the sed command to replace all instances of the word ‘Dirt’ with ‘Soils’ in soils.txt.
+
+sed 's/Dirt/Soils/g' soils.txt
